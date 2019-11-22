@@ -1,0 +1,43 @@
+{
+  "name": "lur",
+  "version": "0.0.1",
+  "description": "Tiny naive LRU cache.",
+  "source": "index.ts",
+  "main": "dist/lur.js",
+  "module": "dist/lur.es.js",
+  "unpkg": "dist/lur.umd.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "microbundle build",
+    "watch": "microbundle watch",
+    "publish": "npm publish",
+    "test": "ava test.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/estrattonbailey/lur.git"
+  },
+  "author": "estrattonbailey",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/estrattonbailey/lur/issues"
+  },
+  "homepage": "https://github.com/estrattonbailey/lur#readme",
+  "devDependencies": {
+    "ava": "^2.4.0",
+    "microbundle": "^0.11.0",
+    "ts-node": "^8.4.1"
+  },
+  "ava": {
+    "compileEnhancements": false,
+    "extensions": [
+      "ts"
+    ],
+    "require": [
+      "ts-node/register"
+    ]
+  }
+}
