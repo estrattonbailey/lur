@@ -14,9 +14,10 @@
     "build": "microbundle build",
     "watch": "microbundle watch",
     "test": "ava test.ts",
-    "postbuild": "npm run test",
     "format": "prettier-standard ./*.ts --format",
-    "release": "np"
+    "release": "np",
+    "prerelease": "npm run build",
+    "postbuild": "npm run test"
   },
   "husky": {
     "hooks": {
@@ -42,7 +43,6 @@
     "ts-node": "^8.10.2"
   },
   "ava": {
-    "compileEnhancements": false,
     "extensions": [
       "ts"
     ],
