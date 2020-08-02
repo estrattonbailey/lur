@@ -1,6 +1,6 @@
 {
   "name": "lur",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Tiny naive LRU cache.",
   "source": "index.ts",
   "main": "dist/lur.js",
