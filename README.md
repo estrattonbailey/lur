@@ -54,6 +54,23 @@ cache.set(key, value);
 cache.get(key); // => { b: 2 }
 ```
 
+Although not strictly compatible with the concept of LRU, `lur` also provides
+methods of serialization and providing initial values:
+
+```javascript
+const cache = lur(3, {
+  a: '1',
+  b: '2',
+  c: '3'
+})
+
+cache.keys // => ['a', 'b', 'c']
+
+cache.serialize() // => { a: 1, b: 2, c: 3 }
+```
+
+Keep in mind, when using `serialize`, non-string keys will be dropped.
+
 ### License
 
 MIT License © [Eric Bailey](https://estrattonbailey.com)
