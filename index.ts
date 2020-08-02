@@ -1,6 +1,6 @@
 export default function lru<Key = any, Value = any> (
   limit = Infinity,
-  initialCache: { [k: string]: any } = {}
+  initialCache?: { [k: string]: any }
 ) {
   let cache: [Key, Value][] = initialCache
     ? Object.keys(initialCache).reduce((c, k) => {
