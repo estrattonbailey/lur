@@ -13,8 +13,14 @@
   "scripts": {
     "build": "microbundle build",
     "watch": "microbundle watch",
-    "publish": "npm publish",
-    "test": "ava test.ts"
+    "test": "ava test.ts",
+    "postbuild": "npm run test",
+    "format": "prettier-standard ./*.ts --format"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "prettier-standard ./*.ts --format --staged"
+    }
   },
   "repository": {
     "type": "git",
@@ -27,9 +33,11 @@
   },
   "homepage": "https://github.com/estrattonbailey/lur#readme",
   "devDependencies": {
-    "ava": "^2.4.0",
-    "microbundle": "^0.11.0",
-    "ts-node": "^8.4.1"
+    "ava": "^3.11.0",
+    "husky": "^4.2.5",
+    "microbundle": "^0.12.3",
+    "prettier-standard": "^16.4.1",
+    "ts-node": "^8.10.2"
   },
   "ava": {
     "compileEnhancements": false,
