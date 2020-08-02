@@ -15,7 +15,8 @@
     "watch": "microbundle watch",
     "test": "ava test.ts",
     "postbuild": "npm run test",
-    "format": "prettier-standard ./*.ts --format"
+    "format": "prettier-standard ./*.ts --format",
+    "release": "np"
   },
   "husky": {
     "hooks": {
@@ -36,6 +37,7 @@
     "ava": "^3.11.0",
     "husky": "^4.2.5",
     "microbundle": "^0.12.3",
+    "np": "^6.3.2",
     "prettier-standard": "^16.4.1",
     "ts-node": "^8.10.2"
   },
